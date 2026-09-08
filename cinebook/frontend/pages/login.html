@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login – CineBook</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-brand">
+            <i class="fa-solid fa-film"></i>
+            <span>Cine<span class="logo-highlight">Book</span></span>
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="movies.html" class="nav-link">
+                    <i class="fa-solid fa-film"></i>
+                    <span>Movies</span>
+                </a>
+            </li>
+            <li id="navAuthContainer">
+                <a href="login.html" class="btn-nav-auth">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Auth Form -->
+    <main class="container" style="display: flex; align-items: center; justify-content: center;">
+        <div class="auth-wrapper">
+            <div class="auth-header">
+                <i class="fa-solid fa-film" style="font-size: 2.2rem; color: var(--accent-red); margin-bottom: 0.5rem;"></i>
+                <h2>Welcome Back</h2>
+                <p>Sign in to your CineBook account to manage your tickets</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <div class="form-input-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" class="form-control" placeholder="name@example.com" required autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <div class="form-input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" class="form-control" placeholder="••••••••" required autocomplete="current-password">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="btnLoginSubmit" style="margin-top: 1.5rem; padding: 0.8rem;">
+                    <i class="fa-solid fa-right-to-bracket"></i> Sign In
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="register.html">Register here</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>&copy; 2026 CineBook. All rights reserved.</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/api.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

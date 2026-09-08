@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Summary & Payment – CineBook</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-brand">
+            <i class="fa-solid fa-film"></i>
+            <span>Cine<span class="logo-highlight">Book</span></span>
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="movies.html" class="nav-link">
+                    <i class="fa-solid fa-film"></i>
+                    <span>Movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-bookings.html" class="nav-link">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>My Bookings</span>
+                </a>
+            </li>
+            <li id="navAuthContainer">
+                <a href="login.html" class="btn-nav-auth">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- 1. Booking Summary & Payment View -->
+        <div class="summary-container" id="bookingSummaryContainer">
+            <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem;">
+                <i class="fa-solid fa-receipt" style="color: var(--accent-red);"></i> BOOKING SUMMARY
+            </h2>
+
+            <!-- Movie Info Header -->
+            <div class="summary-card-header">
+                <img id="summaryMovieThumb" class="summary-thumb" src="" alt="Poster">
+                <div class="summary-movie-info">
+                    <h3 class="summary-movie-title" id="summaryMovieTitle">Movie Title</h3>
+                    <div class="summary-movie-detail">
+                        <i class="fa-solid fa-calendar" style="color: var(--accent-red);"></i>
+                        <span id="summaryShowDate">2026-09-10</span>
+                    </div>
+                    <div class="summary-movie-detail">
+                        <i class="fa-solid fa-clock" style="color: var(--accent-red);"></i>
+                        <span id="summaryShowTime">07:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Breakdown -->
+            <div class="summary-table">
+                <div class="summary-row">
+                    <span style="color: var(--text-secondary);">Selected Seats:</span>
+                    <strong id="summarySeats" style="color: var(--accent-amber);">-</strong>
+                </div>
+                <div class="summary-row">
+                    <span style="color: var(--text-secondary);">Number of Tickets:</span>
+                    <strong id="summaryTicketCount">0</strong>
+                </div>
+                <div class="summary-row">
+                    <span style="color: var(--text-secondary);">Price per Ticket:</span>
+                    <strong id="summaryTicketPrice">₹0</strong>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total Amount:</span>
+                    <span id="summaryTotalAmount">₹0</span>
+                </div>
+            </div>
+
+            <!-- Payment Simulation -->
+            <div class="payment-methods-box">
+                <label class="payment-label">
+                    <i class="fa-solid fa-wallet" style="color: var(--accent-amber);"></i> Select Payment Method:
+                </label>
+                <div class="payment-options">
+                    <div class="payment-option active" data-method="UPI">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <span>UPI / QR</span>
+                    </div>
+                    <div class="payment-option" data-method="CARD">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>Credit / Debit Card</span>
+                    </div>
+                    <div class="payment-option" data-method="CASH">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <span>Cash at Counter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proceed Button -->
+            <button class="btn btn-primary btn-block" id="btnSimulatePayment" style="padding: 0.9rem; font-size: 1.05rem;">
+                <i class="fa-solid fa-lock"></i> <span id="payButtonAmount">PAY ₹0</span>
+            </button>
+
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">
+                <i class="fa-solid fa-shield-halved"></i> Simulated secure checkout. No real money will be charged.
+            </p>
+        </div>
+
+        <!-- 2. Booking Confirmation View (Initially Hidden, Shown on Success) -->
+        <div id="bookingConfirmationContainer" style="display: none;">
+            <!-- Rendered by booking.js on successful payment -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>&copy; 2026 CineBook – Online Movie Ticket Booking System</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/api.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

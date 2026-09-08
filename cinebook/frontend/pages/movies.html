@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Movies (30+ Titles) – CineBook</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-brand">
+            <i class="fa-solid fa-film"></i>
+            <span>Cine<span class="logo-highlight">Book</span></span>
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="movies.html" class="nav-link active">
+                    <i class="fa-solid fa-film"></i>
+                    <span>Movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-bookings.html" class="nav-link">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>My Bookings</span>
+                </a>
+            </li>
+            <li id="navAuthContainer">
+                <a href="login.html" class="btn-nav-auth">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="section-header">
+            <div>
+                <h1 class="section-title">
+                    <i class="fa-solid fa-film"></i> Explore 30+ Blockbusters
+                </h1>
+                <p class="section-subtitle">Browse, search, and book tickets for all popular Hollywood and Indian cinema releases</p>
+            </div>
+
+            <!-- Movie Search Bar -->
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" 
+                       id="movieSearchInput" 
+                       class="search-input" 
+                       placeholder="Search by movie title or genre (e.g. Nolan, Action, Endgame)..."
+                       aria-label="Search movies">
+            </div>
+        </div>
+
+        <!-- Category / Genre Filters Bar -->
+        <div class="category-filter-container">
+            <div class="category-filters">
+                <button class="category-pill active" data-genre="All">
+                    <i class="fa-solid fa-border-all"></i> All Movies
+                </button>
+                <button class="category-pill" data-genre="Action">
+                    <i class="fa-solid fa-burst"></i> Action
+                </button>
+                <button class="category-pill" data-genre="Adventure">
+                    <i class="fa-solid fa-mountain"></i> Adventure
+                </button>
+                <button class="category-pill" data-genre="Science Fiction">
+                    <i class="fa-solid fa-rocket"></i> Science Fiction
+                </button>
+                <button class="category-pill" data-genre="Drama">
+                    <i class="fa-solid fa-masks-theater"></i> Drama
+                </button>
+                <button class="category-pill" data-genre="Thriller">
+                    <i class="fa-solid fa-bolt"></i> Thriller
+                </button>
+                <button class="category-pill" data-genre="Comedy">
+                    <i class="fa-solid fa-face-laugh-beam"></i> Comedy
+                </button>
+                <button class="category-pill" data-genre="Romance">
+                    <i class="fa-solid fa-heart"></i> Romance
+                </button>
+                <button class="category-pill" data-genre="Fantasy">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Fantasy
+                </button>
+            </div>
+        </div>
+
+        <!-- Responsive Movies Grid: 4+ desktop, 2-3 tablet, 1 mobile -->
+        <div class="movies-grid" id="moviesGrid">
+            <!-- Dynamically populated by movies.js -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>&copy; 2026 CineBook – Online Movie Ticket Booking System. Full-Stack Java Project.</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/api.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/movies.js"></script>
+</body>
+</html>

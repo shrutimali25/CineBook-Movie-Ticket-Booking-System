@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details – CineBook</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-brand">
+            <i class="fa-solid fa-film"></i>
+            <span>Cine<span class="logo-highlight">Book</span></span>
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="movies.html" class="nav-link active">
+                    <i class="fa-solid fa-film"></i>
+                    <span>Movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-bookings.html" class="nav-link">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>My Bookings</span>
+                </a>
+            </li>
+            <li id="navAuthContainer">
+                <a href="login.html" class="btn-nav-auth">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Movie Details Content -->
+    <main class="container">
+        <!-- Back Button -->
+        <a href="movies.html" class="btn btn-outline" style="margin-bottom: 1.5rem; font-size: 0.85rem;">
+            <i class="fa-solid fa-arrow-left"></i> Back to Movies
+        </a>
+
+        <!-- Movie Details Card -->
+        <div class="movie-details-wrapper" id="movieDetailsSection">
+            <!-- Large Poster -->
+            <div class="details-poster-box">
+                <img id="moviePoster" src="" alt="Movie Poster" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&auto=format&fit=crop&q=80';">
+            </div>
+
+            <!-- Content -->
+            <div class="details-content">
+                <h1 class="details-title" id="movieTitle">Loading...</h1>
+                
+                <div class="details-badges">
+                    <span class="badge-item badge-rating">
+                        <i class="fa-solid fa-star"></i> <span id="movieRating">-</span>
+                    </span>
+                    <span class="badge-item">
+                        <i class="fa-solid fa-clock"></i> <span id="movieDuration">-</span>
+                    </span>
+                    <span class="badge-item">
+                        <i class="fa-solid fa-masks-theater"></i> <span id="movieGenre">-</span>
+                    </span>
+                </div>
+
+                <div class="details-synopsis" id="movieDescription">
+                    Loading movie synopsis...
+                </div>
+
+                <!-- Available Shows Section -->
+                <div class="shows-section">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-calendar-days" style="color: var(--accent-red);"></i> AVAILABLE SHOWS
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 1rem;">
+                        Select your preferred showtime to choose seats
+                    </p>
+
+                    <!-- Shows Grid -->
+                    <div class="shows-grid" id="showsGrid">
+                        <!-- Loaded dynamically by movies.js -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>&copy; 2026 CineBook. All rights reserved.</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/api.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/movies.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings – CineBook</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-brand">
+            <i class="fa-solid fa-film"></i>
+            <span>Cine<span class="logo-highlight">Book</span></span>
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="movies.html" class="nav-link">
+                    <i class="fa-solid fa-film"></i>
+                    <span>Movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-bookings.html" class="nav-link active">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>My Bookings</span>
+                </a>
+            </li>
+            <li id="navAuthContainer">
+                <a href="login.html" class="btn-nav-auth">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="section-header">
+            <div>
+                <h1 class="section-title">
+                    <i class="fa-solid fa-ticket"></i> My Booking History
+                </h1>
+                <p class="section-subtitle">Manage your booked movie tickets, view confirmations, or cancel seats</p>
+            </div>
+            <a href="movies.html" class="btn btn-primary" style="font-size: 0.9rem;">
+                <i class="fa-solid fa-plus"></i> Book Another Movie
+            </a>
+        </div>
+
+        <!-- Bookings List -->
+        <div class="bookings-list" id="myBookingsList">
+            <!-- Dynamically populated by booking.js -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>&copy; 2026 CineBook – Online Movie Ticket Booking System</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/api.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>
